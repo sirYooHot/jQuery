@@ -1,0 +1,368 @@
+/*公共样式_start*/
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-button:vertical {
+  display: none;
+}
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-track {
+  /*background-color: #e2e2e2;*/
+}
+::-webkit-scrollbar-track {
+	border-radius: 5px;
+}
+::-webkit-scrollbar-track-piece {
+	border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, .3);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:vertical:hover {
+  background-color: rgba(0, 0, 0, .25);
+}
+::-webkit-scrollbar-thumb:vertical:active {
+  background-color: rgba(0, 0, 0, .35);
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+ul,li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/*公共样式_end*/
+
+/*页面样式_start*/
+.LotteryActivity {
+    width: 100%;
+    min-width: 1086px;
+    height: 100vh;
+    margin: 0 auto;
+    background: url(../img/lay_bg.jpg) no-repeat;
+    overflow: hidden;
+    background-size: cover;
+    overflow-y: auto;
+}
+.lay_wrap {
+	width: 100%;
+	max-width: 1366px;
+	min-width: 1024px;
+	margin: 0 auto;
+}
+.lay_header {
+	width: 100%;
+	max-width: 1024px;
+	margin: 0 auto 0;
+	text-align: center;
+}
+.title_img {
+	width: 100%;
+}
+.lay_nav {
+	width: 100%;
+	max-width: 1024px;
+	margin: 20px auto 0;
+	text-align: center;
+}
+.lay_nav .toBtn_wrap {
+	margin: 0 20px 0 20px;
+}
+.lay_nav .toBtn_wrap .selectBtn {
+	display: inline-block;
+	min-width: 160px;
+	line-height: 42px;
+	min-height: 42px;
+	/*padding: 6px 12px;*/
+	outline: none;
+	border: none;
+	background: #a90acd;
+	color: #ffffff;
+}
+.lay_nav .toBtn_wrap .toBtn {
+	min-width: 200px;
+	background-color: #a90acd;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #fff;
+    border: solid 1px #CFCFCF;
+    line-height: 40px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 0px 20px;
+    transition: all .3s;
+}
+.lay_nav .toBtn_wrap .toBtn:hover {
+	background-color: #cb27f1;
+}
+.lay_nav .toBtn_wrap .toBtn.unStartBtn,
+.lay_nav .toBtn_wrap .toBtn.unSaveBtn,
+.lay_nav .toBtn_wrap .prizeTypeBtn,
+.lay_nav .toBtn_wrap .userNumBtn {
+	display: none;
+}
+.open > .dropdown-toggle.btn-default:focus,
+.open > .dropdown-toggle.btn-default:hover {
+	background: #d355e9;
+}
+.lay_main {
+	box-sizing: border-box;
+	position: relative;
+	
+	width: 1086px;
+	height: 480px;
+	margin: 50px auto 0;
+	background: url(../img/mainBg.png) no-repeat;
+	overflow: hidden;
+    background-size: cover;
+}
+#prizeTypeList {
+	position: relative;
+}
+#userNumList {
+	position: relative;
+}
+#prizeTypeList .group,
+#userNumList .group {
+	text-align: center;
+	cursor: pointer;
+	
+	line-height: 30px;
+	min-height: 30px;
+}
+#userNumList .group:hover {
+	background: #a90acd;
+	color: #FFFFFF;
+}
+#prizeTypeList .group:hover {
+	background: #a90acd;
+	color: #FFFFFF;
+}
+/*当前滚动中奖者*/
+.lay_main .showSelectedUser {
+	position: absolute;
+	top: 26px;
+	left: 48px;
+	
+	width: 400px;
+	font-size: 30px;
+	
+	-o-text-overflow: ellipsis;/*兼容opera*/
+	text-overflow: ellipsis;/*这就是省略号喽*/		  
+	overflow: hidden;/*设置超过的隐藏*/
+	white-space: nowrap;/*设置不折行*/
+}
+.lay_main .showSelectedUser .userName,
+.lay_main .showSelectedUser .userTel {
+	color: #FFFFFF;
+}
+.lay_main .showSelectedUser .userName {
+	
+}
+.lay_main .showSelectedUser .userTel {
+	margin: 0 0 0 40px;
+}
+/*中奖者列表*/
+.selectedList {
+	position: absolute;
+	top: 160px;
+    left: 20px;
+    
+    width: 430px;
+	min-height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	text-align: center;
+}
+.lay_main .selectedList .cancelIcon {
+	display: none;
+	width: 16px;
+	height: 16px;
+	margin: 0 10px 0 0;
+	vertical-align: text-bottom;
+	cursor: pointer;
+}
+.lay_main .selectedList .userName,
+.lay_main .selectedList .userTel {
+	display: inline-block;
+	
+	min-width: 60px;
+	color: #FFFFFF;
+}
+.lay_main .selectedList .userName {
+	display: inline-block;
+	
+	min-width: 130px;
+	text-align: center;
+}
+.lay_main .selectedList .userTel {
+	
+}
+/*保存中奖者名单*/
+   .saveSelectedList {
+    	position: absolute;
+	    top: 200px;
+	    left: 538px;
+	    
+	    width: 547px;
+		height: 250px;
+		overflow-y: auto;
+	    font-size: 20px;
+	    /*text-align: center;*/
+}
+.saveSelectedList .group {
+	box-sizing: border-box;
+	float: left;
+	
+	width: 50%;
+	padding: 0 10px;
+	min-height: 50px;
+    line-height: 50px;
+    
+    -o-text-overflow: ellipsis;/*兼容opera*/
+	text-overflow: ellipsis;/*这就是省略号喽*/		  
+	overflow: hidden;/*设置超过的隐藏*/
+	white-space: nowrap;/*设置不折行*/
+}
+.lay_main .saveSelectedList .userName,
+.lay_main .saveSelectedList .userTel {
+	color: #FFFFFF;
+}
+.lay_main .saveSelectedList .userName {
+	float: left;
+	min-width: 110px;
+}
+.lay_main .saveSelectedList .userTel {
+	float: left;
+	/*margin: 0 0 0 25px;*/
+}
+/*页面样式_end*/
+   
+	/*提示框_start*/
+/*提示*/
+#hintModule {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,0.3);
+}
+#hintModule .hint {
+	width: 300px;
+	min-height: 100px;
+	margin: 0 auto;
+	text-align: center;
+	background: #FFFFFF;
+	border-radius: 6px;
+	position: absolute;
+	top: 36%;
+	left: 0;
+	right: 0;
+}
+#hintModule .hint .title {
+	width: 100%;
+	line-height: 30px;
+	background: #a809cd;
+	color: #FFFFFF;
+	margin: 0 auto;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+#hintModule .hint .hintInner {
+	margin: 20px auto 0;
+}
+#hintModule .hint .toBtn_wrap {
+	width: 100%;
+}
+#hintModule .toBtn_wrap .toBtn {
+	display: inline-block;
+	min-width: 60px;
+	line-height: 24px;
+	min-height: 24px;
+	margin: 10px 10px;
+	border: none;
+	outline: none;
+}
+#hintModule .toBtn_wrap .toBtn.sureBtn {
+	color: #FFFFFF;
+	background: #a809cd;
+}
+/*提示框_end*/
+
+.luckTotal_wrap {
+	position: absolute;
+	top: 30px;
+	left: 880px;
+	
+	min-width: 80px;
+	line-height: 50px;
+	min-height: 50px;
+	color: #d331a0;
+	font-size: 36px;
+	text-align: center;
+}
+.luckTotal_wrap .luckTotal {
+	
+}
+/*底部*/
+.lay_footer {
+	min-height: 100px;
+}
+
+
+/*类型遮罩层*/
+#prizeTypeDiv {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	background: rgba(0,0,0,0.3);
+	cursor: pointer;
+	
+	width: 200px;
+	height: 42px;
+}
+
+
+
+
+/*.zjmd .list {  
+	
+    -webkit-background-clip: text;     			按文字裁剪
+    -webkit-text-fill-color: transparent;     	文字的颜色使用背景色
+    background-color:#19385c;     				设置一个背景色
+    background-image: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.6) 30%, #aff0ff 50%, rgba(0, 0, 0, 0.6) 70%);设置渐变的背景，按对角线渐变
+    background-blend-mode: hard-light;    		设置背景为混合模式下的强光模式
+    background-size: 200%;
+    -webkit-animation: shine 4s infinite;    	给背景添加动画改变位置
+    padding-left: 90px;
+}
+@-webkit-keyframes shine {
+
+    from {background-position: 100%;}
+
+    to {background-position: 0;}
+
+}*/
