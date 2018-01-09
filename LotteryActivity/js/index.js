@@ -3,7 +3,7 @@ $(function(){
 	
 	prizeTypeList = [
 		{
-			prizeType: '一等奖',
+			prizeType: '三等奖',
 			status: 1
 		},
 		{
@@ -11,7 +11,7 @@ $(function(){
 			status: 2
 		},
 		{
-			prizeType: '三等奖',
+			prizeType: '一等奖',
 			status: 3
 		},
 		{
@@ -19,7 +19,7 @@ $(function(){
 			status: 4
 		},
 		{
-			prizeType: '董事长现金大奖',
+			prizeType: '特别奖',
 			status: 5
 		}
 	]
@@ -74,6 +74,10 @@ $(function(){
 		onSelect: function(value,text){
 			//alert("这是回调函数，选中的值："+value+" \n选中的下拉框文本："+text);
 			typeChange()
+			
+			// 重置当前中奖者
+			$('.showSelectedUser .userName').html('--')
+			$('.showSelectedUser .userTel').html("---")
 		}
 	});
 	$("#userNumList").selectpick({

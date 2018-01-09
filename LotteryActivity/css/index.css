@@ -43,7 +43,9 @@ ul,li {
 	padding: 0;
 	list-style: none;
 }
-
+* {
+	font-family: "微软雅黑";
+}
 /*公共样式_end*/
 
 /*页面样式_start*/
@@ -91,11 +93,12 @@ ul,li {
 	border: none;
 	background: #a90acd;
 	color: #ffffff;
+	font-weight: bold;
 }
 .lay_nav .toBtn_wrap .toBtn {
 	min-width: 200px;
 	background-color: #a90acd;
-    font-size: 13px;
+    font-size: 20px;
     font-weight: 500;
     border-radius: 5px;
     -moz-border-radius: 5px;
@@ -112,6 +115,9 @@ ul,li {
 }
 .lay_nav .toBtn_wrap .toBtn:hover {
 	background-color: #cb27f1;
+}
+.lay_nav .toBtn_wrap .startBtn {
+	font-weight: bold;
 }
 .lay_nav .toBtn_wrap .toBtn.unStartBtn,
 .lay_nav .toBtn_wrap .toBtn.unSaveBtn,
@@ -193,7 +199,6 @@ ul,li {
 	text-align: center;
 }
 .lay_main .selectedList .cancelIcon {
-	display: none;
 	width: 16px;
 	height: 16px;
 	margin: 0 10px 0 0;
@@ -344,25 +349,3 @@ ul,li {
 	width: 200px;
 	height: 42px;
 }
-
-
-
-
-/*.zjmd .list {  
-	
-    -webkit-background-clip: text;     			按文字裁剪
-    -webkit-text-fill-color: transparent;     	文字的颜色使用背景色
-    background-color:#19385c;     				设置一个背景色
-    background-image: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.6) 30%, #aff0ff 50%, rgba(0, 0, 0, 0.6) 70%);设置渐变的背景，按对角线渐变
-    background-blend-mode: hard-light;    		设置背景为混合模式下的强光模式
-    background-size: 200%;
-    -webkit-animation: shine 4s infinite;    	给背景添加动画改变位置
-    padding-left: 90px;
-}
-@-webkit-keyframes shine {
-
-    from {background-position: 100%;}
-
-    to {background-position: 0;}
-
-}*/

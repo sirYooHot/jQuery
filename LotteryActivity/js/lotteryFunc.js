@@ -111,7 +111,7 @@ function startRunning(startSign){
 		selectedListModel(selectedList)
 		
 		startingFunc()
-		cancelIconDiv(false)
+		
 		
 		status = $("#prizeTypeList").val()
 		luckyCount = $("#userNumList").val()
@@ -187,7 +187,6 @@ function showResult() {
 					hintTxtModel("抽奖结束！")
 					unStartFunc()
 					prizeTypeDiv(true)
-					
 				},1000)
 				
 			}
@@ -395,7 +394,6 @@ function startingFuncUserNumList(valTxt){
 	$(".lay_nav .toBtn_wrap .toBtn.userNumBtn").css("display",'inline-block')
 	$(".lay_nav .toBtn_wrap .toBtn.userNumBtn").val(inputTxt)
 }
-// 
 function prizeTypeDiv(sign){
 	if(sign){
 		$("#prizeTypeDiv").css("display","block")
@@ -410,13 +408,4 @@ $("#prizeTypeDiv").click(function(){
 		hintSureAgainModel("名单未保存，确定切换抽奖类型吗？")
 	}
 })
-// 关闭图标
-function cancelIconDiv(sign){
-	if(sign){
-		$("#selectedList .group .cancelIcon").css("display","inline-block")
-	}else{
-		$("#selectedList .group .cancelIcon").css("display","none")
-	}
-	
-}
 // 样式控制-------------------------------------------------end
